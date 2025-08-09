@@ -101,3 +101,8 @@ A trained model might predict survival based on input features:
 - **Feature engineering** (e.g., family size, title extraction) improves predictions.
 
 This analysis helps us understand historical biases in survival and serves as a foundation for classification problems in data science.
+
+**📩 Connect**
+
+[LinkedIn ](https://www.linkedin.com/in/azamhussain03/)
+
