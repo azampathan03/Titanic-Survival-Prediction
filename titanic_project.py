@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1-5SOMLG-ONR83Ne7ODdgs36T6P6MV8J1
 """
 
-pip install streamlit pandas scikit-learn scikit-learn ipywidgets streamlit pyngrok -q streamlit pyngrok
-
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
