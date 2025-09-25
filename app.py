@@ -370,7 +370,6 @@ def titanic_app():
     input_df = user_input_features()
 
     # Display prediction
-    st.subheader('Prediction')
     if st.sidebar.button('Predict Survival'):
         prediction = model.predict(input_df)
         prediction_proba = model.predict_proba(input_df)
