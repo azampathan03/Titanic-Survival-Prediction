@@ -331,7 +331,7 @@ def titanic_app():
     """, unsafe_allow_html=True)
 
     # Titanic image
-    image= Image.open(titanic.jpg)
+    image= Image.open('titanic.jpg')
     st.image(image, caption="RMS Titanic", use_container_width=True)
 
     # Input features in sidebar
