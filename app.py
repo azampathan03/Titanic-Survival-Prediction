@@ -391,10 +391,10 @@ def titanic_app():
             }
             save_prediction_history(st.session_state.auth["username"], record)
 
-survival_message = "🚢 TITANIC: SANK | YOU: FLOATED" if prediction[0] == 1 else "💀WELCOME TO THE BOTTOM OF THE OCEAN "
-sub_message = "You survived! The only thing sinking faster than the ship was Jack's dating profile!" if prediction[0] == 1 else "Your survival chances sank faster than the Titanic. Should've learned to swim!"
+        survival_message = "🚢 TITANIC: SANK | YOU: FLOATED" if prediction[0] == 1 else "💀WELCOME TO THE BOTTOM OF THE OCEAN "
+        sub_message = "You survived! The only thing sinking faster than the ship was Jack's dating profile!" if prediction[0] == 1 else "Your survival chances sank faster than the Titanic. Should've learned to swim!"
             
-            st.markdown(f"""
+        st.markdown(f"""
             <div class="prediction-card">
                 <h2>Prediction Result</h2>
                 <p>Based on the passenger details, this person would have:</p>
