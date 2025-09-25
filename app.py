@@ -325,14 +325,14 @@ def titanic_app():
     # App header with HTML
     st.markdown("""
     <div class="title">
-        <h1>🚢 Titanic Survival Prediction</h1>
-        <p>Predict whether a passenger would have survived the Titanic disaster</p>
+        <h1>🚢 Titanic Survival Prediction Web App</h1>
+        <p>Step back in time to 1912 and discover your fate aboard the legendary RMS Titanic. This interactive app uses authentic passenger data and machine learning to predict whether you would have survived one of history's most famous maritime disasters.</p>
     </div>
     """, unsafe_allow_html=True)
 
     # Titanic image
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/RMS_Titanic_3.jpg/1200px-RMS_Titanic_3.jpg",
-            caption="RMS Titanic", use_container_width=True)
+    image= Image.open(titanic.jpg)
+    st.image(image", caption="RMS Titanic", use_container_width=True)
 
     # Input features in sidebar
     st.sidebar.header('Passenger Details')
@@ -395,7 +395,11 @@ def titanic_app():
             <h2>Prediction Result</h2>
             <p>Based on the passenger details, this person would have:</p>
             <h3 class="{'survived' if prediction[0] == 1 else 'not-survived'}">
-                {'SURVIVED' if prediction[0] == 1 else 'DID NOT SURVIVE'}
+                {'### 🚢 TITANIC: SANK | YOU: FLOATED
+
+You survived! The only thing sinking faster than the ship was Jack's dating profile!' if prediction[0] == 1 else '### ⚰️ WELCOME TO THE BOTTOM OF THE OCEAN 
+
+Your survival chances sank faster than the Titanic.'}
             </h3>
             <div style="margin-top: 20px;">
                 <p>Survival probability: <strong>{survival_prob:.1f}%</strong></p>
