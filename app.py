@@ -396,12 +396,12 @@ def titanic_app():
             <h2>Prediction Result</h2>
             <p>Based on the passenger details, this person would have:</p>
             <h3 class="{'survived' if prediction[0] == 1 else 'not-survived'}">
-                {if prediction[0] == 1:
+                if prediction[0] == 1:
         print('### 🚢 TITANIC: SANK | YOU: FLOATED
 You survived! The only thing sinking faster than the ship was Jacks dating profile!')
 else:
-('### ⚰️ WELCOME TO THE BOTTOM OF THE OCEAN
-Your survival chances sank faster than the Titanic.')}
+print('### ⚰️ WELCOME TO THE BOTTOM OF THE OCEAN
+Your survival chances sank faster than the Titanic.')
             </h3>
             <div style="margin-top: 20px;">
                 <p>Survival probability: <strong>{survival_prob:.1f}%</strong></p>
