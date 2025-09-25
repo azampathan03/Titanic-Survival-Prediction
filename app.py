@@ -397,7 +397,7 @@ def titanic_app():
             <h3 class="{'survived' if prediction[0] == 1 else 'not-survived'}">
                 {'### 🚢 TITANIC: SANK | YOU: FLOATED
 
-You survived! The only thing sinking faster than the ship was Jack's dating profile!' if prediction[0] == 1 else '### ⚰️ WELCOME TO THE BOTTOM OF THE OCEAN 
+You survived! The only thing sinking faster than the ship was Jacks dating profile!' if prediction[0] == 1 else '### ⚰️ WELCOME TO THE BOTTOM OF THE OCEAN 
 
 Your survival chances sank faster than the Titanic.'}
             </h3>
