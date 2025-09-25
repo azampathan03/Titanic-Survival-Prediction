@@ -401,17 +401,15 @@ def titanic_app():
                 <h3 class="{'survived' if prediction[0] == 1 else 'not-survived'}">
                     {survival_message}
                 </h3>
-                <p>{sub_message}</p>
-
-                    
+                <p>{sub_message}</p>  
             <div style="margin-top: 20px;">
                 <p>Survival probability: <strong>{survival_prob:.1f}%</strong></p>
                 <div style="background: #ecf0f1; height: 20px; border-radius: 10px;">
                     <div style="background: {'#2ecc71' if prediction[0] == 1 else '#e74c3c'};
                         width: {survival_prob}%; height: 100%; border-radius: 10px;"></div>
+                    </div>
                 </div>
             </div>
-        </div>
         """, unsafe_allow_html=True)
 
 
