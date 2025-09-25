@@ -391,18 +391,27 @@ def titanic_app():
             }
             save_prediction_history(st.session_state.auth["username"], record)
 
-        st.markdown(f"""
-        <div class="prediction-card">
-            <h2>Prediction Result</h2>
-            <p>Based on the passenger details, this person would have:</p>
-            <h3 class="{'survived' if prediction[0] == 1 else 'not-survived'}">
-                if prediction[0] == 1:
-        print('### 🚢 TITANIC: SANK | YOU: FLOATED
-You survived! The only thing sinking faster than the ship was Jacks dating profile!')
-else:
-print('### ⚰️ WELCOME TO THE BOTTOM OF THE OCEAN
-Your survival chances sank faster than the Titanic.')
-            </h3>
+survival_message = "🚢 TITANIC: SANK | YOU: FLOATED" if prediction[0] == 1 else "💀WELCOME TO THE BOTTOM OF THE OCEAN "
+sub_message = "You survived! The only thing sinking faster than the ship was Jack's dating profile!" if prediction[0] == 1 else "Your survival chances sank faster than the Titanic. Should've learned to swim!"
+            
+            st.markdown(f"""
+            <div class="prediction-card">
+                <h2>Prediction Result</h2>
+                <p>Based on the passenger details, this person would have:</p>
+                <h3 class="{'survived' if prediction[0] == 1 else 'not-survived'}">
+                    {survival_message}
+                </h3>
+                <p>{sub_message}</p>
+                <div style="margin-top: 20px;">
+                    <p>Survival probability: <strong>{survival_prob:.1f}%</strong></p>
+                    <div style="background: #ecf0f1; height: 20px; border-radius: 10px;">
+                        <div style="background: {'#2ecc71' if prediction[0] == 1 else '#e74c3c'};
+                            width: {survival_prob}%; height: 100%; border-radius: 10px;"></div>
+                    </div>
+                </div>
+            </div>
+
+                    
             <div style="margin-top: 20px;">
                 <p>Survival probability: <strong>{survival_prob:.1f}%</strong></p>
                 <div style="background: #ecf0f1; height: 20px; border-radius: 10px;">
