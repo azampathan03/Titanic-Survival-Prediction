@@ -487,22 +487,8 @@ if st.session_state.auth["logged_in"]:
     elif page == "Dashboard":
         dashboard()
 
-    # Add admin section INSIDE the same logged_in block
-    st.sidebar.markdown("---")
-    st.sidebar.subheader("🔧 Admin Tools")
-    
-    if st.sidebar.button("View All Users"):
-        users_db = load_db()
-        if users_db:
-            st.sidebar.success(f"Total Users: {len(users_db)}")
-            for username, password in users_db.items():
-                st.sidebar.write(f"👤 {username}: `{password}`")
-        else:
-            st.sidebar.info("No users registered yet")
-
     if st.button("Logout"):
         st.session_state.auth["logged_in"] = False
         st.rerun()
 else:
     auth_page()
-        
