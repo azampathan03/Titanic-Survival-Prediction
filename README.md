@@ -2,7 +2,7 @@ Titanic Survival Prediction
 The sinking of the **RMS Titanic** in 1912 remains one of the most tragic maritime disasters in history. With **1,502 lives lost** out of **2,224 passengers and crew**, the event has been widely studied, including in data science and machine learning. Predicting survival on the Titanic is a classic classification problem used to teach predictive modeling.
 
 Web Overview
-<img width="960" height="540" alt="titanic app1" src="https://github.com/user-attachments/assets/b5234384-97dc-45d9-a5ce-576186db0ca2" />
+<img width="960" height="540" alt="titanic app" src="titanic.jpg" />
 
 
 ## **1. Understanding the Dataset**
